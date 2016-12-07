@@ -31,6 +31,11 @@ angular
         controller: 'UserCtrl',
         controllerAs: 'user'
       })
+      .when('/user/:id',  {
+        templateUrl: 'views/user/user.html',
+        controller: 'getUserCtrl',
+        controllerAs: 'user'
+      })
       .otherwise({
         redirectTo: '/'
       });

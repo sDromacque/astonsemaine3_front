@@ -1,1 +1,12 @@
 <h1>List users</h1>
+
+<table class="table table-striped" ng-controller="UserCtrl">
+  <tr>
+    <th>Name</th>
+    <th>Link</th>
+  </tr>
+  <tr ng-repeat="user in users">
+    <td>{{user.name}}</td>
+    <td><a ng-href="#/user/{{user.id}}">Link</a></td>
+  </tr>
+</table>

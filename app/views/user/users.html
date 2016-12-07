@@ -1,12 +1,16 @@
 <h1>List users</h1>
 
-<table class="table table-striped" ng-controller="UserCtrl">
-  <tr>
-    <th>Name</th>
-    <th>Link</th>
-  </tr>
-  <tr ng-repeat="user in users">
-    <td>{{user.name}}</td>
-    <td><a ng-href="#/user/{{user.id}}">Link</a></td>
-  </tr>
-</table>
+<div class="ui relaxed divided list animated" ng-controller="UserCtrl">
+  <div class="item" ng-repeat="user in users">
+    <i class="large github middle aligned icon"></i>
+    <div class="content">
+      <a class="header" ng-href="#/user/{{user.id}}">{{user.name}}</a>
+      <div class="description">
+        Gender : {{user.gender}} <br/>
+        Age : {{user.age}} <br/>
+        Investment : {{user.balance}}<br/>
+        Created at : {{user.createdAt  | date:'yyyy-MM-dd'}}
+      </div>
+    </div>
+  </div>
+</div>

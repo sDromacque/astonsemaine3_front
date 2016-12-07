@@ -1,3 +1,57 @@
-<div ng-controller="getUserCtrl">
-  {{user}}
+<div id="flex_box">
+
+  <div class="ui card" ng-controller="getUserCtrl">
+    <div class="ui slide masked image">
+      <img src="../../images/vladimir-poutine.jpg" class="visible content">
+    </div>
+    <div class="content">
+      <a class="header">{{user.name}}</a>
+      <div class="meta">
+        <span class="date">Create in {{user.registered  | date:'yyyy-MM-dd'}}</span><br>
+      </div>
+    </div>
+    <div class="extra content">
+      <a>
+        <i class="users icon"></i>
+        {{user.friends.length}}
+      </a>
+    </div>
+  </div>
+
+  <div class="ui items">
+    <div class="item">
+      <a class="ui tiny image">
+        <img src="../../images/f.jpg">
+      </a>
+      <div class="content">
+        <a class="header">Stevie Feliciano</a>
+        <div class="description">
+          <p>Stevie Feliciano is a <a>library scientist</a> living in New York City. She likes to spend her time reading, running, and writing.</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <a class="ui tiny image">
+        <img src="../../images/Trump1.jpg">
+      </a>
+      <div class="content">
+        <a class="header">Veronika Ossi</a>
+        <div class="description">
+          <p>Veronika Ossi is a set designer living in New York who <a>enjoys</a> kittens, music, and partying.</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <a class="ui tiny image">
+        <img src="../../images/images.jpg">
+      </a>
+      <div class="content">
+        <a class="header">Jenny Hess</a>
+        <div class="description">
+          <p>Jenny is a student studying Media Management at <a>the New School</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

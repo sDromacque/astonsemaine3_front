@@ -4,11 +4,11 @@
   <div class="item" ng-repeat="user in users">
     <i class="large github middle aligned icon"></i>
     <div class="content">
-      <a class="header" ng-href="#/user/{{user.id}}">{{user.name}}</a>
+      <a class="header" ng-href="#/user/{{user.id}}">{{user.first_name + user.last_name}}</a>
       <div class="description">
         Gender : {{user.gender}} <br/>
-        Age : {{user.age}} <br/>
-        Investment : {{user.balance}}<br/>
+        Society : {{user.society}} <br/>
+        Country : {{user.country}}<br/>
         Created at : {{user.registered  | date:'yyyy-MM-dd'}}
       </div>
     </div>

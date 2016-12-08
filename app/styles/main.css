@@ -81,10 +81,3 @@ body {
     border-bottom: 0;
   }
 }
-
-#flex_box{
-  display: flex;
-}
-.ui.items{
-  margin: 0 0 0 0.5em;
-}

@@ -1,3 +1,42 @@
-<div ng-controller="getUserCtrl">
-  {{user}}
+<div id="flex_box" class="card_user" ng-controller="getUserCtrl">
+  <div class="ui card" >
+    <div class="ui slide masked image">
+      <img src="../../images/vladimir-poutine.jpg" class="visible content">
+    </div>
+    <div class="content">
+      <a class="header">{{user.first_name + user.last_name}}</a>
+      <div class="meta">
+        <span class="date">Create in {{user.createdAt  | date:'yyyy-MM-dd'}}</span><br>
+      </div>
+    </div>
+    <div class="extra content">
+      <i ng-if="user.gender == 'Female'">
+        <i class="pink disabled {{user.gender | lowercase}} icon"></i>
+      </i>
+      <i ng-if="user.gender == 'Male'">
+        <i class="blue disabled {{user.gender | lowercase}} icon"></i>
+      </i>
+      <i class="{{user.country | lowercase}} flag"></i>
+      <a>
+        <i class="users icon"></i>
+        {{user.follow.length}}
+      </a>
+      <i class="green disabled add icon"></i>
+    </div>
+  </div>
+
+  <div class="ui items">
+    <h3>Follow by :</h3>
+    <div class="item" ng-repeat="follow in user.follow">
+      <a class="ui tiny image">
+        <img src="{{follow.avatar}}">
+      </a>
+      <div class="content">
+        <a class="header">{{follow.user}}</a>
+        <div class="description">
+          <p>Stevie Feliciano is a <a>library scientist</a> living in New York City. She likes to spend her time reading, running, and writing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

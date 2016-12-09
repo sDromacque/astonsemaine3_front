@@ -18,3 +18,14 @@
 {
   flex: 1;
 }
+.projects{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.projects > div {
+  flex: 3 0 30%;
+  min-height: 250px;
+  margin: 0.5%;
+}

@@ -8,10 +8,9 @@
  * Controller of the frontApp
  */
 angular.module('frontApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($http) {
+    $http.get('http://localhost:1337/api/project/tags')
+      .then(function (res) {
+        $scope.tags = res.data;
+      })
   });

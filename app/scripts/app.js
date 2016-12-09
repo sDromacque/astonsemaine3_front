@@ -18,8 +18,8 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        controller: 'getTagsCtrl',
+        controllerAs: 'project'
       })
       .when('/users',  {
         templateUrl: 'views/user/users.html',
@@ -30,6 +30,11 @@ angular
         templateUrl: 'views/user/user.html',
         controller: 'getUserCtrl',
         controllerAs: 'user'
+      })
+      .when('/project/:tag', {
+        templateUrl: 'views/project/projectByTag.html',
+        controller: 'ProjectByTagCtrl',
+        conrtoller: 'project'
       })
       .otherwise({
         redirectTo: '/'

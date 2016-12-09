@@ -13,6 +13,7 @@ angular.module('frontApp')
     $http.get('http://localhost:1337/project?tag=' + tag)
       .then(function (res) {
         $scope.projectByTag = res.data;
+        $scope.tag = tag;
       })
   })
   .controller('getTagsCtrl', function ($http, $scope) {

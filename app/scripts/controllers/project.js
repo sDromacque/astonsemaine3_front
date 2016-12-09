@@ -14,4 +14,9 @@ angular.module('frontApp')
       .then(function (res) {
         $scope.projectByTag = res.data;
       })
+  .controller('getTagsCtrl', function ($http, $scope) {
+    $http.get('http://localhost:1337/api/project/tags')
+      .then(function (res) {
+        $scope.tags = res.data;
+      })
   });

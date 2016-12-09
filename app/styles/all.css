@@ -7,3 +7,14 @@
 .card_user{
   max-height: 300px;
 }
+.home{
+  display: flex;
+}
+.presentation
+{
+  flex: 3;
+}
+.tags
+{
+  flex: 1;
+}

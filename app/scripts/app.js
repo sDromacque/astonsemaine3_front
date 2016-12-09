@@ -31,6 +31,11 @@ angular
         controller: 'getUserCtrl',
         controllerAs: 'user'
       })
+      .when('/project/:tag', {
+        templateUrl: 'views/project/projectByTag.html',
+        controller: 'ProjectByTagCtrl',
+        conrtoller: 'project'
+      })
       .otherwise({
         redirectTo: '/'
       });
